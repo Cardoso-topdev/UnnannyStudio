@@ -1,0 +1,100 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the home page of the site.
+// -----------------------------------------------------------------------------
+
+.banner {
+  position: relative;
+  padding: 275px 0 170px;
+  background: $black;
+  overflow-y: hidden;
+  .container {
+    display: flex;
+    .content-holder {
+      position: relative;
+      max-width: 484px;
+      z-index: 1;
+      h1 {
+        color: $white;
+      }
+      .btn {
+        margin: 36px 0 0;
+      }
+    }
+    .image-holder {
+      position: relative;
+      margin-top: -75px;
+      margin-left: auto;
+      margin-right: 80px;
+      &::before {
+        content: url(../images/moon.png);
+        position: absolute;
+        top: -197px;
+        left: -523px;
+      }
+      img {
+        position: relative;
+        opacity: 0.34;
+      }
+    }
+  }
+}
+.platform {
+  padding: 135px;
+  background: rgba(0, 0, 0, 0.06);
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .p {
+    &-cards {
+      display: flex;
+      width: calc(50% - 40px);
+    }
+    &-card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: calc(100% / 3 - 8px);
+      padding: 32px;
+      border-radius: 8px;
+      border: 1px solid rgba(0, 0, 0, 0.58);
+      background: linear-gradient(rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.12)), #121212;
+      p { 
+        text-align: center;
+        color: $text-color-white;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 1.25px;
+        text-transform: uppercase;
+      }
+      &:not(:last-child) {
+        margin-right: 12px;
+      }
+    }
+    &-icons {
+      width: calc(50% - 40px);
+      display: flex;
+      justify-content: center;
+      p {
+        font-size: 22px;
+        line-height: 24px;
+        letter-spacing: 0.18px;
+        margin: 0 0 24px;
+      }
+    }
+    &-icon {
+      &__items {
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+      }
+      &__item {
+        font-size: 0;
+        &:not(:last-child) {
+          margin-right: 41px;
+        }
+      }
+    }
+  }
+}
