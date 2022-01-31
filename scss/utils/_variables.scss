@@ -9,7 +9,7 @@ $primary-dark: #C41C00;
 $secondary: #EEFF41;
 $secondary-light: #FFFF78;
 $secondary-dark: #B8CC00;
-$purple: rgb(128, 90, 203);
+$purple: #805acb;
 $text-color: #4F5E65;
 $text-color-white: rgba(255, 255, 255, 0.87);
 $heading-color: rgba(0, 0, 0, 0.87);
@@ -21,12 +21,12 @@ $white: #fff;
 $breakpoints: (
   "phone-xsmall": 320px,
   "phone-small": 375px,
-  "phone": 425px,
+  "phone": 424px,
   "phone-wide": 480px,
   "phablet": 560px,
   "tablet-small": 640px,
-  "tablet": 768px,
-  "tablet-wide": 992px,
+  "tablet": 767px,
+  "tablet-wide": 991px,
   "desktop-small": 1024px,
   "desktop": 1200px,
   "desktop-wide": 1439px,

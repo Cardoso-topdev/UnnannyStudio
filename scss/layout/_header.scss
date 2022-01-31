@@ -11,6 +11,10 @@
   padding: 20px 0;
   background: black;
   z-index: 10;
+  transition: all 0.3s ease-in-out;
+  @include mq('tablet', max) {
+    padding: 16px 0;
+  }
   .container {
     display: flex;
     align-items: center;
@@ -24,6 +28,9 @@
     img {
       filter: brightness(0) invert(1);
       transition: all 0.3s ease-in-out;
+      @include mq('tablet', max) {
+        max-width: 150px;
+      }
     }
   }
   &-menu {
@@ -31,6 +38,9 @@
       display: flex;
       align-items: center;
       padding: 8px;
+      @include mq('tablet', max) {
+        padding: 8px 0;
+      }
     }
     &__item {
       a {
@@ -41,6 +51,10 @@
           letter-spacing: 1.25px;
           text-transform: uppercase;
           transition: all 0.3s ease-in-out;
+          @include mq('tablet', max) {
+            font-size: 12px;
+            letter-spacing: 0.4px;
+          }
           &:hover {
             color: $primary-light;
           }
@@ -49,6 +63,9 @@
             border-radius: 40px;
             border: 1px solid $primary-light;
             color: $primary-light;
+            @include mq('tablet', max) {
+              padding: 8px;
+            }
             &:hover {
               background: $primary-light;
               color: white;
@@ -58,12 +75,27 @@
       }
       &:not(:last-child) {
         margin-right: 32px;
+        @include mq('tablet', max) {
+          margin-right: 14px;
+        }
       }
     }
   }
   &.scrolled {
+    background: $white;
     .header-logo {
-      filter: none;
+      img {
+        filter: none;
+      }
+    }
+    .header-menu {
+      &__item {
+        a {
+          &.popup-trigger:not(.button) {
+            color: $text-color
+          }
+        }
+      }
     }
   }
 }

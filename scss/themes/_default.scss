@@ -21,6 +21,9 @@
   margin: 0 auto;
   padding: 0 20px;
   max-width: 1336px;
+  @include mq('tablet', max) {
+    padding: 0 12px;
+  }
   &.lg {
     max-width: 1380px;
   }
@@ -131,6 +134,115 @@
       box-shadow: 0px 7px 8px rgba(0, 0, 0, 0.20), 
                   0px 5px 22px rgba(0, 0, 0, 0.12), 
                   0px 12px 17px rgba(0, 0, 0, 0.14);
+    }
+  }
+}
+.modal {
+  display: none;
+  padding: 48px 56px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  max-width: 100%;
+  transform: translate(-50%, -50%);
+  background-color: $white;
+  border-radius: 16px;
+  box-shadow: 0px 7px 8px rgba(0, 0, 0, 0.20), 
+              0px 5px 22px rgba(0, 0, 0, 0.12), 
+              0px 12px 17px rgba(0, 0, 0, 0.14);
+  z-index: 30;
+  @include mq('tablet', max) {
+    padding: 24px 16px;
+  }
+  &-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 20;
+  }
+  &-logo {
+    font-size: 0;
+    text-align: center;
+    img {
+      max-width: 230px;
+    }
+  }
+  p {
+    color: $heading-color;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 14px 0 34px;
+    text-align: center;
+  }
+  &-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    border-radius: 8px;
+    color: white;
+    max-width: 100%;
+    width: 264px;
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 400;
+    margin: 0 0 16px;
+    img {
+      height: 40px;
+      margin-right: 16px
+    }
+    &.purple {
+      background: rgba(145, 71, 254, 0.8);
+      &:hover {
+        background: rgba(145, 71, 254, 1);
+      }
+    }
+    &.red {
+      background: rgba(255, 0, 0, 0.8);
+      &:hover {
+        background: rgba(255, 0, 0, 1);
+      }
+    }
+    &:hover {
+      box-shadow: 0px 7px 8px rgba(0, 0, 0, 0.20), 
+                  0px 5px 22px rgba(0, 0, 0, 0.12), 
+                  0px 12px 17px rgba(0, 0, 0, 0.14);
+    }
+  }
+  &-social {
+    position: relative;
+    margin: 72px 0 0;
+    &::before {
+      content: '';
+      position: absolute;
+      top: -28px;
+      left: calc(50% - 100px);
+      width: 200px;
+      border-top: 1px solid rgba(0, 0, 0, 0.13);
+    }
+    &__items {
+      display: flex;
+      font-size: 0;
+      align-items: center;
+      justify-content: center;
+    }
+    &__item {
+      img {
+        transition: all 0.3s ease-in-out;
+        filter: brightness(0.37)
+      }
+      &:not(:last-child) {
+        margin-right: 17.6px;
+      }
+      &:hover {
+        img {
+          filter: brightness(0);
+        }
+      }
     }
   }
 }
