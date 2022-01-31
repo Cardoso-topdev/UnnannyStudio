@@ -592,10 +592,22 @@ p {
           padding: 12px;
           margin: 0 auto; } }
       .media .media-holder .video-player .video-holder {
+        position: relative;
         width: 100%;
         padding-top: 56%;
         background-color: #fff;
-        border-radius: 8px; }
+        border-radius: 8px;
+        overflow: hidden; }
+        .media .media-holder .video-player .video-holder video {
+          display: none;
+          position: absolute;
+          max-width: 100%;
+          top: 0;
+          left: 0;
+          object-fit: cover;
+          object-position: center; }
+          .media .media-holder .video-player .video-holder video.active {
+            display: block; }
       .media .media-holder .video-player .video-buttons {
         padding: 24px 8px 0 16px; }
         @media only screen and (max-width: 767px) {

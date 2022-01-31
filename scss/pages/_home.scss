@@ -204,10 +204,24 @@
         margin: 0 auto;
       }
       .video-holder {
+        position: relative;
         width: 100%;
         padding-top: 56%;
         background-color: $white;
         border-radius: 8px;
+        overflow: hidden;
+        video {
+          display: none;
+          position: absolute;
+          max-width: 100%;
+          top: 0;
+          left: 0;
+          object-fit: cover;
+          object-position: center;
+          &.active {
+            display: block;
+          }
+        }
       }
       .video-buttons {
         padding: 24px 8px 0 16px;
