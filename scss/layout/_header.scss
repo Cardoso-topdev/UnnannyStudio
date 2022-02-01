@@ -82,19 +82,9 @@
     }
   }
   &.scrolled {
-    background: $white;
     .header-logo {
       img {
         filter: none;
-      }
-    }
-    .header-menu {
-      &__item {
-        a {
-          &.popup-trigger:not(.button) {
-            color: $text-color
-          }
-        }
       }
     }
   }

@@ -4,6 +4,7 @@
 
 (function ($) {
   $(document).ready(function () {
+    $('video').bind('contextmenu',function() { return false; });
     $('.testimonials .slider-holder').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
